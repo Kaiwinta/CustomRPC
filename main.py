@@ -36,5 +36,15 @@ while True:
 
         except Exception as e:
             print("Error reading VS Code context:", e)
-
+    else:
+        print("Status file not found. Ensure the VS Code extension is running.")
+        rpc.update(
+            details="Idle",
+            state="No active file",
+            large_image="onepiece_logo",
+            small_image="strawhat",
+            large_text="VS Code RPC",
+            small_text="Idle",
+            start=starting_time
+        )
     time.sleep(5)
