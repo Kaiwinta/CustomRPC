@@ -17,7 +17,8 @@ while True:
         try:
             with open(status_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-
+                
+                
             filename = data.get("file", "Unknown")
             language = data.get("language", "Unknown")
             workspace = data.get("workspace", "No Workspace")
